@@ -1,26 +1,69 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-xl transition-all duration-300
+    border border-white/20 hover:border-pink-200/40 p-6 hover:-translate-y-1;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-semibold text-gray-800 mb-12 flex items-center justify-center gap-3;
+  }
+
+  .section-title-icon {
+    @apply w-8 h-8 text-pink-400;
+  }
+
+  .skill-tag {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105
+    flex items-center gap-2;
+  }
+
+  .skill-tag-pink {
+    @apply bg-pink-50 text-pink-600 hover:bg-pink-100;
+  }
+
+  .skill-tag-lavender {
+    @apply bg-purple-50 text-purple-600 hover:bg-purple-100;
+  }
+
+  .skill-tag-peach {
+    @apply bg-orange-50 text-orange-600 hover:bg-orange-100;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-pink-100 focus:border-pink-300 
+    focus:ring focus:ring-pink-100 bg-white/50 backdrop-blur-sm transition-all duration-300;
+  }
+
+  .project-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-xl transition-all duration-300
+    border border-white/20 hover:border-pink-200/40 p-6 hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
 }
