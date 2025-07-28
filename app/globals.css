@@ -36,7 +36,7 @@
 
   .skill-tag-pink {
     @apply bg-pink-50 text-pink-600 hover:bg-pink-100;
-  }
+}
 
   .skill-tag-lavender {
     @apply bg-purple-50 text-purple-600 hover:bg-purple-100;
