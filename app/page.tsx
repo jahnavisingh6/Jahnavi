@@ -213,7 +213,7 @@ export default function Home() {
               src="/profile.JPG"
               alt="Jahnavi Singh"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority
             />
           </div>
@@ -269,6 +269,43 @@ export default function Home() {
               that bridge the gap between data and real-world applications. When I'm not coding, you'll find me exploring new AI technologies 
               and mentoring others in their tech journey! ✨
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="py-20 bg-white/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="section-title">
+            <span className="text-2xl">🏫</span> Education
+          </h2>
+          <div className="flex flex-col gap-8">
+            {/* ASU */}
+            <div className="card bg-purple-50">
+              <h3 className="text-lg font-semibold mb-1">Arizona State University</h3>
+              <div className="text-pink-500 mb-1">Master of Science in Information Technology<br/>(Information Systems Management)</div>
+              <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                <span>📍 Tempe, AZ</span> <span>—</span> <span>GPA: 3.87/4.0</span>
+              </div>
+              <div className="text-sm text-purple-600 font-semibold mb-1">Relevant Coursework:</div>
+              <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Advanced Big Data Analytics & AI</li>
+                <li>Analyzing Big Data</li>
+                <li>Natural Language Processing</li>
+                <li>Cloud Architecture</li>
+                <li>Data Visualization & Reporting</li>
+                <li>Advanced DBMS</li>
+                <li>Information Systems Development</li>
+              </ul>
+            </div>
+            {/* SIT */}
+            <div className="card bg-pink-50">
+              <h3 className="text-lg font-semibold mb-1">Symbiosis Institute of Technology</h3>
+              <div className="text-pink-500 mb-1">B.Tech. in Electronics & Telecommunications</div>
+              <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                <span>📍 Pune, India</span> <span>—</span> <span>GPA: 3.5/4.0</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
